@@ -1,0 +1,33 @@
+resources:
+- repo: self
+
+trigger: ['staging']
+
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node 10.x'
+  inputs:
+    versionSpec: 10.x
+
+- script: |
+    npm install
+    npm run build-staging
+  displayName: 'npm install and build'
+  env:
+    NODE_ENV: staging
+
+- task: ArchiveFiles@2
+  displayName: Archive
+  inputs:
+    rootFolderOrFile: '$(build.sourcesDirectory)/dist'
+    includeRootFolder: false
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.SourceVersion)_$(Build.BuildId).zip'
+
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: build'
+  inputs:
+    ArtifactName: build

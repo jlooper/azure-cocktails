@@ -42,7 +42,7 @@
 		}
 	},
 	"engines": {
-		"node": "10.6"
+		"node": "10.14"
 	},
 	"browserslist": [
 		"> 1%",

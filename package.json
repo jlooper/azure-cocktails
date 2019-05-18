@@ -41,6 +41,9 @@
 			"autoprefixer": {}
 		}
 	},
+	"engines": {
+		"node": "10.6"
+	},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions"

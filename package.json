@@ -3,10 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"serve": "vue-cli-service serve --port 9001",
+		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"build-staging": "NODE_ENV=production vue-cli-service build --mode staging",
-		"build-production": "NODE_ENV=production vue-cli-service build --mode production",
 		"lint": "vue-cli-service lint"
 	},
 	"dependencies": {
@@ -42,7 +40,7 @@
 		}
 	},
 	"engines": {
-		"node": "10.14"
+		"node": "10.0"
 	},
 	"browserslist": [
 		"> 1%",

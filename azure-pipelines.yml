@@ -20,13 +20,3 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-# Publish Artifacts
-- task: PublishBuildArtifacts@1
-  inputs:
-    artifactName: dist
-    pathtoPublish: 'dist'
-
-- task: AzureRmWebAppDeployment@4
-  displayName: 'Deploy Azure App Service'
-  inputs:
-    packageForLinux: '$(System.DefaultWorkingDirectory)/jlooper.azure-cocktails/dist'

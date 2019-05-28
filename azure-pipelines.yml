@@ -20,3 +20,8 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+# Publish Artifacts - you need this so they can be found by the Release step
+- task: PublishBuildArtifacts@1
+  inputs:
+    artifactName: dist
+    pathtoPublish: 'dist'

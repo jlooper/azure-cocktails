@@ -26,11 +26,7 @@ steps:
     artifactName: dist
     pathtoPublish: 'dist'
 
-#Your build pipeline references an undefined variable named ‘Parameters.ConnectedServiceName’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
-
 - task: AzureRmWebAppDeployment@4
   displayName: 'Deploy Azure App Service'
   inputs:
-    azureSubscription: '$(Parameters.ConnectedServiceName)'
-    WebAppName: '$(Parameters.WebAppName)'
     packageForLinux: '$(System.DefaultWorkingDirectory)/jlooper.azure-cocktails/dist'

@@ -16,12 +16,24 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #003366;
+}
+h1,
+h2 {
+  font-family: "BioRhyme", serif;
+  color: white;
+}
+.headline {
+  font-size: 3em;
+}
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Cabin", sans-serif;
+  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
+  font-size: 1.5em;
 }
 </style>
